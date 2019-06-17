@@ -12,7 +12,7 @@ class ReplyRequest extends Request
             case 'POST':
             {
                 return [
-                    // CREATE ROLES
+                    'content' => 'required|min:2',
                 ];
             }
             // UPDATE
@@ -27,7 +27,9 @@ class ReplyRequest extends Request
             case 'DELETE':
             default:
             {
-                return [];
+                return [
+                    'content' => 'required|min:2',
+                ];
             };
         }
     }
